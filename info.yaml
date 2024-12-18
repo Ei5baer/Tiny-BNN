@@ -1,62 +1,54 @@
---- 
-# TinyTapeout project information 
+# Tiny Tapeout project information
 project:
-  wokwi_id:    0        # If using wokwi, set this to your project's ID
+  title:        "Fibonacci Sequence Generator"  # Project title
+  author:       "Samuel Ellicott"               # Your name
+  discord:      "sellicott"                     # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "generate the Nth fibonacci number" # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
-# If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
-# Source files must be in ./src and you must list each source file separately
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_sellicott_fib_seq"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - popcount.v
-    - neuron.v
-    - top.v
-  top_module:  "tiny_bnn"      # put the name of your top module here, make it unique by prepending your github username
+    - "tt_um_sellicott_fib_seq.v"
+    - "fib.v"
 
-# Keep a track of the submission yaml
-yaml_version: 3.0
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "n[0]"
+  ui[1]: "n[1]"
+  ui[2]: "n[2]"
+  ui[3]: "n[3]"
+  ui[4]: "n[4]"
+  ui[5]: "n[5]"
+  ui[6]: "n[6]"
+  ui[7]: "n[7]"
 
-# As everyone will have access to all designs, try to make it easy for someone new to your design to know what
-# it does and how to operate it. This info will be automatically collected and used to make a datasheet for the chip.
-#
-# Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
-documentation: 
-  author:       "ReJ aka Renaldas Zioma"
-  title:        "Tiny binarized neural network"
-  language:     "Verilog"
-  description:  "8 neurons"
+  # Outputs
+  uo[0]: "fib[0]"
+  uo[1]: "fib[1]"
+  uo[2]: "fib[2]"
+  uo[3]: "fib[3]"
+  uo[4]: "fib[4]"
+  uo[5]: "fib[5]"
+  uo[6]: "fib[6]"
+  uo[7]: "fib[7]"
 
-# Longer description of how the project works. You can use standard markdown format.
-  how_it_works: |
-      TODO
+  # Bidirectional pins
+  uio[0]: "start_stb"
+  uio[1]: "busy"
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
-# Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  how_to_test:  |
-      TODO
-
-# A description of what the inputs do
-  inputs:               
-    - clock
-    - setup
-    - in0 / in parameter (if setup is high)
-    - in1
-    - in2
-    - in3
-    - in4 
-    - in5
-# A description of what the outputs do
-  outputs:
-    - output neuron 1
-    - output neuron 2
-    - output neuron 3
-    - output neuron 4
-    - output neuron 5
-    - output neuron 6
-    - output neuron 7
-    - output neuron 8 / out parameter (if setup is high)
-
-# The following fields are optional
-  tag:          "neuron, binarized, bnn"      # comma separated list of tags: test encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
-  external_hw:  ""      # Describe any external hardware needed
-  discord:      "ReJ aka Renaldas Zioma#3631"      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     0       # Clock frequency in Hz (if required)
-  picture:      ""      # relative path to a picture in your repository
+# Do not change!
+yaml_version: 6
