@@ -1,6 +1,6 @@
 `default_nettype none
 
-module tt_um_sellicott_tiny_bnn (
+module tt_um_ei5baer_tiny_bnn (
 //    input [7:0] io_in,
 //    output [7:0] io_out
     input  wire [7:0] ui_in,    // Dedicated inputs
