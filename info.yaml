@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  author:       "ReJ aka Renaldas Zioma"
   title:        "Tiny binarized neural network"
+  author:       "ReJ aka Renaldas Zioma"
+  description:  "8 neurons" 
   language:     "Verilog"
-  description:  "8 neurons"
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
 
