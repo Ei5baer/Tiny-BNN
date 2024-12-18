@@ -29,7 +29,7 @@ module tb (
     assign out = outputs;
 
 
-    tt_um_sellicott_tiny_bnn tiny_bnn(
+    tt_um_ei5baer_tiny_bnn tiny_bnn(
         `ifdef GL_TEST
             .vccd1( 1'b1),
             .vssd1( 1'b0),
