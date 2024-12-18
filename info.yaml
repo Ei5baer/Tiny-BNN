@@ -1,24 +1,70 @@
 # Tiny Tapeout project information
 project:
-  title:        "Fibonacci Sequence Generator"  # Project title
-  author:       "Samuel Ellicott"               # Your name
-  discord:      "sellicott"                     # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "generate the Nth fibonacci number" # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  author:       "ReJ aka Renaldas Zioma"
+  title:        "Tiny binarized neural network"
+  language:     "Verilog"
+  description:  "8 neurons"
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
+
+
+
+
+
+
+# TinyTapeout project information 
+project:
+  wokwi_id:    0        # If using wokwi, set this to your project's ID
+
+# If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
+# Source files must be in ./src and you must list each source file separately
+
+
+
+
+
+
+
+
+
+
+
+  
+
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  #tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_sellicott_fib_seq"
+  top_module:  "tt_um_ei5baer_tiny_bnn"      # put the name of your top module here, make it unique by prepending your github username
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "tt_um_sellicott_fib_seq.v"
-    - "fib.v"
+    - popcount.v
+    - neuron.v
+    - top.v
+    - cells.v
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 pinout:
   # Inputs
   ui[0]: "n[0]"
