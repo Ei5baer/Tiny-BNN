@@ -106,7 +106,7 @@ module tt_um_ei5baer_tiny_bnn (
             for (i3 = 0; i3 < GLOBAL_OUTPUTS; i3 = i3 + 1) begin : gen_blk_i3
                 neuron #(.INPUTS(HIDDEN_UNITS)) output_layer(
                     .clk(clk_user), .setup(setup), .param_in(param_chain[HIDDEN_UNITS + HIDDEN_UNITS2 + i3 - 1]), .param_out(param_chain[HIDDEN_UNITS + HIDDEN_UNITS2 + i3]),
-                    .inputs(hidden2), .axon(global_output[i3]));
+                    .inputs({6'b0,hidden2}), .axon(global_output[i3]));
             end
     endgenerate
 //        end
